@@ -4,6 +4,8 @@ const cors = require("cors");
 const app = express();
 const mongoose = require("mongoose");
 const Asset = require("./models/asset");
+const NewAsset = require("./models/newAsset");
+// const seedDB = require("./seedDB");
 
 app.use(express.json());
 app.use(cors());
@@ -16,10 +18,17 @@ mongoose
   .then(() => console.log("DB connected"))
   .catch((e) => console.log(e));
 
+// seedDB();
+
 app.get("/getTopologyData", async (req, res) => {
   const topologyData = await Asset.find({});
   res.json({ data: topologyData });
 });
+
+app.get("/getAssetList", async (req, res) => {
+  const assetList = await NewAsset.find({});
+  res.json({ data: assetList });
+})
 
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => console.log(`server running at port ${PORT}`));
