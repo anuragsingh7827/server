@@ -5,6 +5,7 @@ const app = express();
 const mongoose = require("mongoose");
 const Asset = require("./models/asset");
 const Alert = require("./models/alert");
+const Summary = require("./models/summary");
 // const seedDB = require("./seedDB");
 
 app.use(express.json());
@@ -28,7 +29,12 @@ app.get("/getTopologyData", async (req, res) => {
 app.get("/getActiveAlerts", async (req, res) => {
   const activeAlerts = await Alert.find({});
   res.json({ data: activeAlerts });
-})
+});
+
+app.get("/getSummary", async(req, res) => {
+  const summary = await Summary.find({});
+  res.json({ data: summary });
+});
 
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => console.log(`server running at port ${PORT}`));
