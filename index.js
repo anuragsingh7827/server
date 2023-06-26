@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const Asset = require("./models/asset");
 const Alert = require("./models/alert");
 const Summary = require("./models/summary");
+const Humidity = require("./models/humidity");
 // const seedDB = require("./seedDB");
 
 app.use(express.json());
@@ -34,6 +35,11 @@ app.get("/getActiveAlerts", async (req, res) => {
 app.get("/getSummary", async(req, res) => {
   const summary = await Summary.find({});
   res.json({ data: summary });
+});
+
+app.get("/getHumidity", async(req, res) => {
+  const humidity = await Humidity.find({});
+  res.json({ data: humidity });
 });
 
 const PORT = process.env.PORT || 8000;
