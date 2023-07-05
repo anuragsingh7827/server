@@ -7,6 +7,7 @@ const Asset = require("./models/asset");
 const Alert = require("./models/alert");
 const Summary = require("./models/summary");
 const Humidity = require("./models/humidity");
+const AssetSensor = require("./models/assetSensor");
 // const seedDB = require("./seedDB");
 
 app.use(express.json());
@@ -40,6 +41,11 @@ app.get("/getSummary", async(req, res) => {
 app.get("/getHumidity", async(req, res) => {
   const humidity = await Humidity.find({});
   res.json({ data: humidity });
+});
+
+app.get("/getAssetSensors", async(req, res) => {
+  const assetSensors = await AssetSensor.find({});
+  res.json({ data: assetSensors });
 });
 
 const PORT = process.env.PORT || 8000;
