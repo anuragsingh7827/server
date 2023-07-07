@@ -5,9 +5,15 @@ const assetSensors = [
     sensorType: "IPDSP",
     sensorCode: "SLOT00",
     sensorStatus: 0,
-    xcoordinate: 6,
-    ycoordinate: 7,
-    customLabels: null,
+    xcoordinate: 104,
+    ycoordinate: 82,
+    customLabels: {
+      labelX: 90,
+      labelY: 117,
+      labelText: "SLOT00",
+      labelOrientation: "horizontal",
+      labelFontSize: 7
+    },
   },
   {
     id: 226,
@@ -15,8 +21,8 @@ const assetSensors = [
     sensorType: "DCC8",
     sensorCode: "SLOT03",
     sensorStatus: 0,
-    xcoordinate: 21,
-    ycoordinate: 7,
+    xcoordinate: 484,
+    ycoordinate: 79,
     customLabels: null,
   },
   {
@@ -25,9 +31,15 @@ const assetSensors = [
     sensorType: "CPU1",
     sensorCode: "SLOT-10",
     sensorStatus: 0,
-    xcoordinate: 46,
-    ycoordinate: 7,
-    customLabels: null,
+    xcoordinate: 566,
+    ycoordinate: 78,
+    customLabels: {
+      labelX: 563,
+      labelY: 123,
+      labelText: "SLOT-10",
+      labelOrientation: "vertical",
+      labelFontSize: 9
+    },
   },
   {
     id: 230,
@@ -35,8 +47,8 @@ const assetSensors = [
     sensorType: "ENM",
     sensorCode: "SLOT07",
     sensorStatus: 0,
-    xcoordinate: 41,
-    ycoordinate: 7,
+    xcoordinate: 264,
+    ycoordinate: 51,
     customLabels: null,
   },
   {
@@ -45,8 +57,8 @@ const assetSensors = [
     sensorType: "PS2",
     sensorCode: "SLOT-7",
     sensorStatus: 0,
-    xcoordinate: 96,
-    ycoordinate: 7,
+    xcoordinate: 685,
+    ycoordinate: 53,
     customLabels: null,
   },
   {
@@ -55,8 +67,8 @@ const assetSensors = [
     sensorType: "CPU2",
     sensorCode: "SLOT-9",
     sensorStatus: 0,
-    xcoordinate: 51,
-    ycoordinate: 7,
+    xcoordinate: null,
+    ycoordinate: null,
     customLabels: null,
   },
   {
@@ -65,9 +77,15 @@ const assetSensors = [
     sensorType: "FXO8",
     sensorCode: "SLOT05",
     sensorStatus: 0,
-    xcoordinate: 31,
-    ycoordinate: 7,
-    customLabels: null,
+    xcoordinate: 181,
+    ycoordinate: 86,
+    customLabels: {
+      labelX: 179,
+      labelY: 134,
+      labelText: "SLOT012",
+      labelOrientation: "vertical",
+      labelFontSize: 8
+    },
   },
   {
     id: 242,
@@ -75,8 +93,8 @@ const assetSensors = [
     sensorType: "PS1",
     sensorCode: "SLOT-8",
     sensorStatus: 0,
-    xcoordinate: 1,
-    ycoordinate: 7,
+    xcoordinate: null,
+    ycoordinate: null,
     customLabels: null,
   },
 ];
