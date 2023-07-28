@@ -11,6 +11,7 @@ const childrenSchema = new Schema({
   status: Boolean,
   location: String,
   cellId: String,
+  severity: Number,
   children: [mongoose.Schema.Types.Mixed]
 });
 
@@ -24,6 +25,7 @@ const assetSchema = new Schema({
   status: Boolean,
   location: String,
   cellId: String,
+  severity: Number,
   children: [mongoose.Schema.Types.Mixed]
 });
 
